@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "summary": "This is a test library.",
   "description": "This is a long description of the library.",
-  "homepage": "The homepage https://github.com/AgileBits/onepassword-app-extension",
+  "homepage": "https://github.com/Antonasg/TestLibrary",
   "license": {
     "type": "MIT",
     "file": "MIT-LICENSE.txt"
@@ -11,7 +11,7 @@
   "dependencies": {   
   },
   "source": {
-    "git": "https://github.com/AgileBits/onepassword-app-extension.git",
+    "git": "https://github.com/Antonasg/TestLibrary.git",
     "tag": "1.0.0"
   },
   "platforms": {
