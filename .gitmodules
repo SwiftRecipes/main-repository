@@ -1,0 +1,3 @@
+[submodule "SwiftCLI/Libraries/SwiftCLI"]
+	path = SwiftCLI/Libraries/SwiftCLI
+	url = https://github.com/jakeheis/SwiftCLI.git
