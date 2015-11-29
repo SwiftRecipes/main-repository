@@ -18,13 +18,21 @@ class FacebookCommand: CommandType {
     
     func execute(arguments: CommandArguments) throws  {
         //do shit
-        
+        let cookTime = try Input.awaitInput(message: "Filename:")
         
         let filePath = FileManager.currentDirectory() + "/FBT_with_count_comment_info.csv"
         print(filePath)
 
-
-        let inputString = try! String(contentsOfFile: filePath)
+        var inputString: String
+        do {
+            inputString = try String(contentsOfFile: filePath)
+        } catch {
+            print("File does not exist")
+            exit(0)
+            inputString = "empty"
+        }
+        
+        
         let csv = CSwiftV(String: inputString)
         
         print(csv.headers)
