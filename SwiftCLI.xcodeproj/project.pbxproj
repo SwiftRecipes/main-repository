@@ -79,6 +79,12 @@
 		C308D2751C0B668B009C90F8 /* CSwiftV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSwiftV.swift; path = SwiftCLI/Libraries/CSwiftV/CSwiftV.swift; sourceTree = "<group>"; };
 		C308D2771C0B6A8F009C90F8 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Models/Message/Message.swift; sourceTree = "<group>"; };
 		C31E4E371C0CE05400536A74 /* Tasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tasks.swift; path = Tasks/Tasks.swift; sourceTree = "<group>"; };
+		C31E4E3A1C0CF9A500536A74 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C31E4E3B1C0CF9A500536A74 /* Logger.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Logger.swiftdoc; sourceTree = "<group>"; };
+		C31E4E3C1C0CF9A500536A74 /* Logger.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = Logger.swiftmodule; sourceTree = "<group>"; };
+		C31E4E3D1C0CF9A500536A74 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C31E4E3E1C0CF9A500536A74 /* TestLibrary.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = TestLibrary.o; sourceTree = "<group>"; };
+		C31E4E3F1C0CF9A500536A74 /* TestLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,7 @@
 		C308D2331C0B19F2009C90F8 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				C31E4E391C0CF9A500536A74 /* TestLibrary-master */,
 				C308D2741C0B6653009C90F8 /* CSwiftV */,
 				C308D2701C0B54AA009C90F8 /* SwiftCSV */,
 				C308D25F1C0B34AF009C90F8 /* SwiftyJSON */,
@@ -288,6 +295,20 @@
 			name = Tasks;
 			sourceTree = "<group>";
 		};
+		C31E4E391C0CF9A500536A74 /* TestLibrary-master */ = {
+			isa = PBXGroup;
+			children = (
+				C31E4E3A1C0CF9A500536A74 /* .gitignore */,
+				C31E4E3B1C0CF9A500536A74 /* Logger.swiftdoc */,
+				C31E4E3C1C0CF9A500536A74 /* Logger.swiftmodule */,
+				C31E4E3D1C0CF9A500536A74 /* README.md */,
+				C31E4E3E1C0CF9A500536A74 /* TestLibrary.o */,
+				C31E4E3F1C0CF9A500536A74 /* TestLibrary.swift */,
+			);
+			name = "TestLibrary-master";
+			path = "recipes/TestLibrary-master";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -432,10 +453,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_INCLUDE_PATHS = "$(SOURCE_ROOT)/recipes/**";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -470,9 +493,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_INCLUDE_PATHS = "$(SOURCE_ROOT)/recipes/**";
 			};
 			name = Release;
 		};

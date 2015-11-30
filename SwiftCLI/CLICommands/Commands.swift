@@ -130,7 +130,6 @@ class TestDownload: CommandType {
             //delete temp dir
             FileManager.deleteTempFolder()
             
-            
             exit(1)
         }
     }

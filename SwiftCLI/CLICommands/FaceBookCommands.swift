@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class FacebookCommand: CommandType {
     let commandName = "facebook"
     let commandShortDescription = "Run facebook command"
@@ -29,15 +30,11 @@ class FacebookCommand: CommandType {
         } catch {
             print("File does not exist")
             exit(0)
-            inputString = "empty"
         }
-        
         
         let csv = CSwiftV(String: inputString)
         
         print(csv.headers)
-        
-        
         
         for (_,element) in csv.rows.enumerate() {
             let message = element[1]
@@ -49,11 +46,7 @@ class FacebookCommand: CommandType {
             //print("\(messageObj.pageName) \n")
             self.messages.append(messageObj)
         }
-        
-        
         self.computeRelevance()
-        
-        
     }
     
     
