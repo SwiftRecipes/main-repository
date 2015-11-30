@@ -34,6 +34,7 @@
 		C308D2721C0B54BE009C90F8 /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C308D2711C0B54BE009C90F8 /* CSV.swift */; };
 		C308D2761C0B668B009C90F8 /* CSwiftV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C308D2751C0B668B009C90F8 /* CSwiftV.swift */; };
 		C308D2781C0B6A8F009C90F8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C308D2771C0B6A8F009C90F8 /* Message.swift */; };
+		C31E4E381C0CE05400536A74 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31E4E371C0CE05400536A74 /* Tasks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -77,6 +78,7 @@
 		C308D2711C0B54BE009C90F8 /* CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSV.swift; path = SwiftCLI/Libraries/SwiftCSV/CSV.swift; sourceTree = "<group>"; };
 		C308D2751C0B668B009C90F8 /* CSwiftV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSwiftV.swift; path = SwiftCLI/Libraries/CSwiftV/CSwiftV.swift; sourceTree = "<group>"; };
 		C308D2771C0B6A8F009C90F8 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Models/Message/Message.swift; sourceTree = "<group>"; };
+		C31E4E371C0CE05400536A74 /* Tasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tasks.swift; path = Tasks/Tasks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		C308D2291C0B1864009C90F8 /* SwiftCLI */ = {
 			isa = PBXGroup;
 			children = (
+				C31E4E361C0CE04100536A74 /* Tasks */,
 				C308D26A1C0B41BC009C90F8 /* FileManager */,
 				C308D2641C0B3A5F009C90F8 /* Model */,
 				C308D25E1C0B26A8009C90F8 /* GitManager */,
@@ -277,6 +280,14 @@
 			name = CSwiftV;
 			sourceTree = "<group>";
 		};
+		C31E4E361C0CE04100536A74 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				C31E4E371C0CE05400536A74 /* Tasks.swift */,
+			);
+			name = Tasks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -351,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C31E4E381C0CE05400536A74 /* Tasks.swift in Sources */,
 				C308D2761C0B668B009C90F8 /* CSwiftV.swift in Sources */,
 				C308D2571C0B1B18009C90F8 /* Output.swift in Sources */,
 				C308D25D1C0B20D3009C90F8 /* Const.swift in Sources */,
@@ -497,6 +509,7 @@
 				C308D2301C0B1864009C90F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

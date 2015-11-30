@@ -25,6 +25,7 @@ CLI.registerCommand(InstallCommand())
 CLI.registerCommand(TestGetJson())
 CLI.registerCommand(CurrentDirCommand())
 CLI.registerCommand(FacebookCommand())
+CLI.registerCommand(TestDownload())
 
 //Go or Debug
 if debug {

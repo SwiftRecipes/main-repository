@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7902FC8166557A4CFA897B9B2755F4F2931583A6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7902FC8166557A4CFA897B9B2755F4F2931583A6" : 0,
+    "1FA2FB8C2BC57F03F22E05F4E40A3BD4587C910E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4389D40B-2C0A-4AE6-85D2-D320BB161AD5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7902FC8166557A4CFA897B9B2755F4F2931583A6" : "SwiftCLI\/",
+    "1FA2FB8C2BC57F03F22E05F4E40A3BD4587C910E" : "SwiftCLI\/SwiftCLI\/Libraries\/SwiftCLI\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SwiftCLI",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SwiftCLI.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jakeheis\/SwiftCLI.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1FA2FB8C2BC57F03F22E05F4E40A3BD4587C910E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SwiftRecipes\/main-repository.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7902FC8166557A4CFA897B9B2755F4F2931583A6"
+    }
+  ]
+}

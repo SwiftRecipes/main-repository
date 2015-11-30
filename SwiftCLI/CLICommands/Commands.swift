@@ -77,15 +77,62 @@ class TestGetJson: CommandType {
     let commandSignature = "" //<person>
     
     func execute(arguments: CommandArguments) throws  {
-        GitManager.retreiveRecipe("TestLibrary", version: "1.0", callBack: { (recipe) -> Void in
+        GitManager.retreiveRecipeInfo("TestLibrary", version: "1.0", callBack: { (recipe) -> Void in
             print(recipe.name)
             print(recipe.version)
             print(recipe.source)
             
-            FileManager.createFolderInCurrentDir("test")
-            print("The current directory is \(FileManager.currentDirectory())")
+            
             exit(0)
         })
+    }
+}
+
+class TestDownload: CommandType {
+    let commandName = "download"
+    let commandShortDescription = "Test download"
+    let commandSignature = "" //<person>
+    
+    func execute(arguments: CommandArguments) throws  {
+        GitManager.retreiveRecipe("aURL") { (data) -> Void in
+            FileManager.createTempFolder()
+            
+            let path = FileManager.currentDirectory() + "/temp/data.zip"
+            data.writeToFile(path, atomically: true)
+            
+            Tasks.unzipFile("temp/data.zip", callBack: { (succes) -> Void in
+                if succes { //success not implemented, always returns true!
+                    print("unzip successfull")
+                } else {
+                    print("unzip unsuccessfull")
+                }
+            })
+            
+            //delete data.zip
+            FileManager.deleteDataInTemp()
+            //create recipe folder, if it doesnt exist.
+            FileManager.createRecipesFolder()
+            //move repository to recipe folder.
+            let contentInTemp = FileManager.contentInTempDir()
+            if contentInTemp.count > 1 {
+                print("too many folder in temp, something went wront")
+                exit(0)
+            }
+            let repoName = contentInTemp.first
+            guard let repoFolderName = repoName else {
+                print("Repo folder name is empty, something went wrong")
+                exit(0)
+            }
+            let folder = FileManager.currentDirectory() + "/temp/\(repoFolderName)/"
+            let desination = FileManager.currentDirectory() + "/recipes/\(repoFolderName)"
+            FileManager.moveFolder(folder, toFolder: desination)
+            
+            //delete temp dir
+            FileManager.deleteTempFolder()
+            
+            
+            exit(1)
+        }
     }
 }
 
