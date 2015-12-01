@@ -19,7 +19,6 @@ class FacebookCommand: CommandType {
     
     func execute(arguments: CommandArguments) throws  {
         //do shit
-        let cookTime = try Input.awaitInput(message: "Filename:")
         
         let filePath = FileManager.currentDirectory() + "/FBT_with_count_comment_info.csv"
         print(filePath)
@@ -33,7 +32,7 @@ class FacebookCommand: CommandType {
         }
         
         let csv = CSwiftV(String: inputString)
-        
+        print("headers:")
         print(csv.headers)
         
         for (_,element) in csv.rows.enumerate() {
@@ -86,12 +85,23 @@ class FacebookCommand: CommandType {
         var data  = "comment_message,comment_like_count,comment_made_to_name,isEffect,isCO2\n"
         
         for message in self.messages {
-            let messageString = message.message.stringByReplacingOccurrencesOfString(",", withString: "") + ","
+			
+			//comment trimming new lines:
+            var messageString = message.message.stringByReplacingOccurrencesOfString(",", withString: "")
+			messageString = messageString.stringByTrimmingCharactersInSet(NSCharacterSet.newlineCharacterSet())
+			let splitArray = messageString.splitOnNewLine()
+			var newComment: String = ""
+			for line in splitArray {
+				newComment += line
+			}
+			
+			newComment += ","
             let like = "\(message.likeCount),"
             let pageName = message.pageName + ","
             let isOptimize = "\(message.isOptimize),"
             let isCO2 = "\(message.isCO2)\n"
-            let complete = messageString + like + pageName + isOptimize + isCO2
+            let complete = newComment + like + pageName + isOptimize + isCO2
+			
             data.appendContentsOf(complete)
         }
 
@@ -103,7 +113,7 @@ class FacebookCommand: CommandType {
         }
         
         print("new csv file is complete")
-        exit(0)
+        exit(1)
     }
     
     
